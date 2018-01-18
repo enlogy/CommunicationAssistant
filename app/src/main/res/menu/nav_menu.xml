@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<group
+    android:clipToPadding="true"
+    >
+    <item android:id="@+id/nav_contact" android:title="通讯录" android:icon="@mipmap/ic_contacts"/>
+    <item android:id="@+id/nav_sms" android:title="我的短信" android:icon="@mipmap/ic_message"/>
+    <item android:id="@+id/nav_myimage" android:title="我的相册" android:icon="@mipmap/ic_photo"/>
+    <item android:id="@+id/nav_cloud" android:title="云端数据" android:icon="@mipmap/ic_backup_photo"/>
+    <item android:id="@+id/nav_about" android:title="关于云助手" android:icon="@mipmap/ic_about"/>
+    <item android:id="@+id/nav_exit" android:title="注销用户" android:icon="@mipmap/exit" />
+</group>
+</menu>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="fill_parent">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:background="@color/colorPrimary"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/colorPrimary"
+        >
+        <ImageView
+            android:id="@+id/nav_back"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@mipmap/back_icon"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            />
+        <View
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"/>
+        <ImageView
+            android:id="@+id/nav_settings"
+            android:src="@mipmap/ic_setting"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="10dp"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+<de.hdodenhof.circleimageview.CircleImageView
+    android:id="@+id/user_headicon"
+    android:layout_width="55dp"
+    android:layout_height="55dp"
+    android:src="@mipmap/ic_user"
+    android:layout_marginLeft="10dp"
+    android:layout_marginBottom="20dp"
+    android:layout_marginTop="20dp"
+    android:layout_marginRight="20dp"/>
+    <LinearLayout
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/m_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:textSize="16sp"
+            android:textColor="@android:color/white"
+        android:text="手机云助手"/>
+        <TextView
+            android:id="@+id/m_phonenumber"
+            android:textSize="14sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:text="00000000000"/>
+    </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

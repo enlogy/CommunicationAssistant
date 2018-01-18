@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="70dp">
+<TextView
+    android:id="@+id/tv_cname"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="张学友"
+    android:layout_centerVertical="true"
+    android:textSize="19sp"
+    android:paddingLeft="20dp"/>
+    <TextView
+        android:id="@+id/tv_cnumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="13200000000"
+        android:textSize="19sp"
+        android:layout_alignBottom="@+id/tv_cname"
+        android:layout_toRightOf="@+id/tv_cname"
+        android:paddingLeft="20dp"/>
+    <CheckBox
+        android:id="@+id/cb_contact"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:button="@null"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="40dp"
+        android:background="@drawable/cb_backgroud"
+        android:alpha="0.7"
+        />
+</RelativeLayout>

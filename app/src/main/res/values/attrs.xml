@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="titleText" format="string"/>
+    <declare-styleable name="TitleBarLinearLayout">
+        <attr name="titleText" />
+    </declare-styleable>
+
+    <attr name="src" format="reference"/>
+    <attr name="itemTitle" format="string"/>
+    <attr name="cb_key" format="string"/>
+    <declare-styleable name="SettingsLinearLayout">
+        <attr name="src"/>
+        <attr name="itemTitle"/>
+        <attr name="cb_key"/>
+    </declare-styleable>
+</resources>

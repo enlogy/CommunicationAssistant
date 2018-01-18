@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">"手机云助手"</string>
+    <string name="about_name">"手机云助手"</string>
+    <string name="check">检查更新</string>
+    <string name="agreement">Apache License</string>
+    <string name="email">邮箱:1021883561@qq.com</string>
+    <string name="qq_number">QQ:1021883561</string>
+    <string name="license_label">Copyright © 2018 enlogy </string>
+
+</resources>

@@ -1,0 +1,84 @@
+apply plugin: 'tinkerpatch-support'
+
+/**
+ * TODO: 请按自己的需求修改为适应自己工程的参数
+ */
+def bakPath = file("${buildDir}/bakApk/")
+// baseInfo 选取build/bakApk/的文件夹,表示需要升级的版本
+def baseInfo = "app-1.0.0-0117-19-18-58"
+def variantName = "debug"
+
+/**
+ * 对于插件各参数的详细解析请参考
+ * http://tinkerpatch.com/Docs/SDK
+ */
+tinkerpatchSupport {
+    /** 可以在debug的时候关闭 tinkerPatch **/
+    tinkerEnable = true
+
+    /** 是否使用一键接入功能  **/
+    reflectApplication = true
+
+    /** 是否开启加固模式，只有在使用加固时才能开启此开关 **/
+    protectedApp = false
+
+    /** 补丁是否支持新增 Activity (exported必须为false)**/
+    supportComponent = false
+
+    autoBackupApkPath = "${bakPath}"
+
+    /** 在tinkerpatch.com得到的appKey **/
+    appKey = "28ba7f51bf8b81d3"
+    /** 注意: 若发布新的全量包, appVersion一定要更新,值要和tinker官网上的app保持一致**/
+    appVersion = "1.0.1"
+
+    def pathPrefix = "${bakPath}/${baseInfo}/${variantName}/"
+    def name = "${project.name}-${variantName}"
+
+    baseApkFile = "${pathPrefix}/${name}.apk"
+    baseProguardMappingFile = "${pathPrefix}/${name}-mapping.txt"
+    baseResourceRFile = "${pathPrefix}/${name}-R.txt"
+}
+
+/**
+ * 用于用户在代码中判断tinkerPatch是否被使能
+ */
+android {
+    defaultConfig {
+        buildConfigField "boolean", "TINKER_ENABLE", "${tinkerpatchSupport.tinkerEnable}"
+    }
+}
+
+/**
+ * 一般来说,我们无需对下面的参数做任何的修改
+ * 对于各参数的详细介绍请参考:
+ * https://github.com/Tencent/tinker/wiki/Tinker-%E6%8E%A5%E5%85%A5%E6%8C%87%E5%8D%97
+ */
+tinkerPatch {
+    ignoreWarning = false
+    useSign = true
+    dex {
+        dexMode = "jar"
+        pattern = ["classes*.dex"]
+        loader = []
+    }
+    lib {
+        pattern = ["lib/*/*.so"]
+    }
+
+    res {
+        pattern = ["res/*", "r/*", "assets/*", "resources.arsc", "AndroidManifest.xml"]
+        ignoreChange = []
+        largeModSize = 100
+    }
+
+    packageConfig {
+    }
+    sevenZip {
+        zipArtifact = "com.tencent.mm:SevenZip:1.1.10"
+//        path = "/usr/local/bin/7za"
+    }
+    buildConfig {
+        keepDexApply = false
+    }
+}

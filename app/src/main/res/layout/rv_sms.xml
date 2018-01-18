@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingRight="20dp"
+        android:paddingLeft="20dp">
+        <CheckBox
+            android:id="@+id/cb_sms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/colorAccent"
+            android:layout_alignParentRight="true"
+            android:paddingRight="1dp"
+            android:paddingTop="1dp"
+            />
+        <TextView
+            android:id="@+id/tv_s1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="13212341234"
+            android:paddingTop="5dp"
+            />
+
+        <TextView
+            android:id="@+id/tv_s2"
+            android:layout_below="@+id/tv_s1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="3"
+            android:text="HELLOWORLDaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" />
+
+        <TextView
+            android:id="@+id/tv_s3"
+            android:layout_below="@+id/tv_s2"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2017-12-28 20:29"
+            />
+    </RelativeLayout>
