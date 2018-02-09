@@ -11,8 +11,11 @@
 ----
 
 ### 运行截图
-
- 
+ ![image5](https://github.com/Enlogty/CommunicationAssistant/raw/master/img/微信图片_20180209180720.jpg)
+ ![image1](https://github.com/Enlogty/CommunicationAssistant/raw/master/img/c1.jpg)
+ ![image2](https://github.com/Enlogty/CommunicationAssistant/raw/master/img/t2.jpg)
+ ![image3](https://github.com/Enlogty/CommunicationAssistant/raw/master/img/t3.png)
+ ![image4](https://github.com/Enlogty/CommunicationAssistant/raw/master/img/t4.png)
 
 ### 关于作者
 
